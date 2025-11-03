@@ -1,3 +1,11 @@
+[build-system]
+requires = [
+    "numpy>=1.23",
+    "pybind11>=2.11",
+    "scikit-build-core>=0.8",
+]
+build-backend = "scikit_build_core.build"
+
 [project]
 name = "mini-md"
 version = "0.1.0"
@@ -5,3 +13,12 @@ description = "Minimal MD core with pybind11 (Python/C++ interop demo)"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
+
+[tool.scikit-build]
+minimum-version = "0.8"
+wheel.packages = ["src/mini_md"]
+
+[tool.scikit-build.cmake]
+args = [
+    "-DUSE_OPENMP=ON",
+]
