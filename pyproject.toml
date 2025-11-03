@@ -1,0 +1,7 @@
+[project]
+name = "mini-md"
+version = "0.1.0"
+description = "Minimal MD core with pybind11 (Python/C++ interop demo)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
